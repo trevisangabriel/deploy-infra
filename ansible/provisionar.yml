@@ -1,0 +1,17 @@
+- hosts: all
+  become: true
+
+
+    - name: "Update apt"
+      shell: "apt-get update"
+
+
+    - name: "Instala java"
+      shell: "apt install default-jdk -y"
+   
+
+    - name: "Instala nginx"
+      shell: "sudo apt install nginx"   
+
+    - name: "Inicia o nginx"
+      shell: "sudo systemctl start nginx"  
